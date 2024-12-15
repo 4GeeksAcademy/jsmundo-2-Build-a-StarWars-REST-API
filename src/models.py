@@ -28,7 +28,7 @@ class People(db.Model):
     height = db.Column(db.String(50))
     mass = db.Column(db.String(50))
     hair_color = db.Column(db.String(50))
-    ski_colo = db.Column(db.String(50))
+    ski_color = db.Column(db.String(50))
     eye_color = db.Column(db.String(50))
     birth_year = db.Column(db.String(50))
     gender = db.Column(db.String(50))
@@ -37,7 +37,7 @@ class People(db.Model):
     favorites = db.relationship('Favorite', back_populates='people', cascade='all, delete')  
 
     def __repr__(self):
-        return f'<Peole {self.name}>'      
+        return f'<people {self.name}>'      
     
     def serialize(self):
         return {
